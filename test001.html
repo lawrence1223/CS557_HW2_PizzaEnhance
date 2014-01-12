@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+
+    
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+    <!-- JavaScript HTML requirements -->
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+    
+    
+    
+    <!--<script src="detectmobilebrowser.js"></script>-->
+</head>
+<body>
+    <div data-role="page" id="indexpage" data-theme="b">
+        <header data-role="header">
+            <h1>Music Sharing</h1>
+        </header>
+        <section data-role="content">
+            <img id="logopic" src="images/vinyl.png" />
+
+            <a href="#see" data-role="button">See what I am listening</a>
+            <a href="#share" data-role="button">Share</a>
+            <a href="message" data-role="button">Send me message</a>   
+            
+        </section>
+        <footer data-role="footer">
+            <h4>Music-sharing 2013</h4>
+        </footer>
+    </div>
+
+    <div data-role="page" id="menupage">
+        <header data-role="header">
+            <h1>Menu</h1>
+        </header>
+        <section data-role="content">
+            <p>Extra cheese costs $2.00 per pizza no matter the size</p>
+
+            <!--<div data-role="collapsible-set">-->
+            <div data-role="collapsible">
+                <h3>Pepperoni</h3>
+                <p>Small        $8.99</p>
+                <p>Medium       $9.99</p>
+                <p>Large        $10.99</p>
+            </div>
+
+            <div data-role="collapsible">
+                <h3>Vegetarian</h3>
+                <p>Small        $9.99</p>
+                <p>Medium       $10.99</p>
+                <p>Large        $11.99</p>
+            </div>
+
+            <div data-role="collapsible">
+                <h3>Combo</h3>
+                <p>Small        $10.99</p>
+                <p>Medium       $11.99</p>
+                <p>Large        $12.99</p>
+            </div>
+            <!-- <div>-->
+
+            <a href="#" data-role="button" data-rel="back" data-icon="back">Back</a>
+
+        </section>
+
+        <footer data-role="footer">
+            <h4>Npu-Pizza 2013</h4>
+        </footer>
+    </div>
+
+    <div data-role="page" id="orderpage">
+        <header data-role="header">
+            <h1>Order Your Pizza</h1>
+        </header>
+
+        <section data-role="content">
+            <label for="size">Pizza Size:</label>
+            <select name="size" id="size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+
+            <label for="type">Pizza Type: </label>
+            <select name="type" id="type">
+                <option value="pepperoni">Pepperoni</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="combo">Combo</option>
+            </select>
+
+            <input type="checkbox" name="cheese" id="cheese" />
+            <label for="cheese">Extra Cheese</label>
+
+            <label for="quantity">Quantity(1~10)</label>
+            <input type="number" name="quantity" id="quantity" min="1" max="50"/>
+
+            <a href="#" data-role="button" id="calbtn">Calculate</a>
+            <span id="calarea"></span>
+            <a id="addcart" href="#" data-role="button">Add To Cart</a>
+            <span id="addcartarea"></span>
+            <a id="gocart" href="#" data-role="button">Go To Cart</a>
+            <span id="gocartarea"></span>
+            <span id="gocheck"></span>
+        </section>
+    </div>
+
+    <div data-role="page" id="checkpage">
+        <header data-role="header">
+            <h1>Check Out Form</h1>
+        </header>
+
+        <section data-role="content">
+            <form action="mobile.asp" method="post">
+                <label for="fname">First Name: </label>
+                <input type="text" name="fname" id="fname" required />
+
+                <label for="lname">Last Name: </label>
+                <input type="text" name="lname" id="lname" required/>
+
+                <fieldset data-role="addressgroup">
+                    <legend>Address</legend>
+
+                    <label for="address1">Street Address: </label>
+                    <input type="text" name="address1" id="address1" required/>
+
+                    <label for="address2">Address Line 2: </label>
+                    <input type="text" name="address2" id="address2" />
+
+                    <label for="city">City: </label>
+                    <input type="text" name="city" id="city" required/>
+
+                    <label for="state">State: </label>
+                    <input type="text" name="state" id="state" required/>
+
+                    <label for="zcode">Zip Code: </label>
+                    <input type="number" name="zcode" id="zcode" required/>
+
+                    <label for="country">Country</label>
+                    <input type="text" name="country" id="country" required/>
+
+                    <label for="telnum">Tel number: </label>
+                    <input type="tel" name="telnum" id="telnum" required/>
+                </fieldset>
+
+                <fieldset data-role="controlgroup">
+                    <legend>What would you like to pay: </legend>
+
+                    <input type="radio" name="radio-choice" id="cash" 
+                        value="choice-1" checked="checked" onclick="hideorshow()"/>
+                    <label for="cash"  onclick="hideorshow()">Cash</label>
+                    
+                    <input type="radio" name="radio-choice" id="credit" 
+                        value="choice-2"/>  <!--howto set it hide-->
+                    <label for="credit"  onclick="hideorshow()">Credit</label>
+                    
+                    <!--<select name="pay" id="pay">
+                        <option value="cash">cash</option>
+                        <option value="credit">credit card</option>
+                    </select>-->
+                    
+                    <fieldset id="cardoption"  data-role="undergroup">
+                        <legend>Credit Card Info: </legend>
+                        <select name="cardtype" id="cardtype">
+                            <option value="Amex">American Express</option>
+                            <option value="Visa">Visa</option>
+                        </select>
+
+                        <label for="cardnum">Credit Card Number: </label>
+                        <input type="number" name="cardnum" id="cardnum" />
+
+                        <label for="expdate">Expiration Date: </label>
+                        <input type="date" name="expdate" id="expdate" />
+
+                    </fieldset>
+
+                    <!-- hide or show -->
+
+                </fieldset>
+                <button>Finalize</button>
+            </form>
+            <!-- finalize page not specify yet -->
+            
+            <!--<a href="#" data-role="button">Finalize</a>-->
+            <a href="#orderpage" data-role="button" data-rel="back" data-icon="back">Back</a>
+            <a href="#indexpage" data-role="button">Cancel</a>
+
+        </section>
+
+    </div>
+</body>
+</html>

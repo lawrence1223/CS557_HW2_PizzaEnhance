@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>checkout</title>
+		<meta name="author" content="lawrence">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0, maximum-scale=1" />
+		<link type="text/css" rel="stylesheet" href="hw2_mobile_style.css" media="all and (max-width: 480px)"/>
+		<link type="text/css" rel="stylesheet" href="hw2_style.css" media="all and (min-width: 481px)" />
+        <!--[if (lt IE 9)&(!IEmobile)]> <link rel="stylesheet" type="text/css" href="hw2_style.css" media="all" /><![endif]-->
+        
+        <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+   	    <script src="jquery.validate.min.js"></script>
+        <script src="form_valid.js"></script>
+        <script src="hw2_script.js"></script>
+	</head>
+
+	<body>        
+                
+                <h1>CheckOut Form</h1>
+                
+				
+			
+				<form id="check_form" action="index.html">
+					
+						<label for="fname">Frist Name: </label>
+						<input id="fname" type="text" name="fname"  /><br>
+						<label for="lname">Last Name: </label>
+                        <input id="lname" type="text" name="lname" /><br><br>
+
+                        <div id="address">Address</div>
+                       
+                        <label for="addr1">Street Address: </label>
+                        <input id="addr1" type="text" name="addr1" /><br>
+                        
+                        <label for="addr2">Address Line 2: </label>
+                        <input id="addr2" type="text" name="addr2"  /><br>
+                        
+                        <label for="city">City: </label>
+                        <input id="city" type="text" name="city" /><br>
+                        
+                        <label for="state">State: </label>
+                        <input id="state" type="text" name="state" /><br><!-- if state and above was filled, it will process to next even if it's an error-->
+                        
+                        <label for="zcode">Zip Code: </label>
+                        <input id="zcode" type="text" name="zcode"  /><br>
+                        
+                        <label for="country">Country: </label>
+                        <input id="country" type="text" name="country" /><br>
+                        
+                        <label for="telnum">Telephone Number: </label>
+						<input id="telnum" type="text" name="telnum"/><br><br>
+						
+						<input type="radio" onclick="hideorshow()" name="paytype" id="cash" value="Cash"/>Cash<br>
+						<input type="radio" onclick="hideorshow()" name="paytype" id="credit" value="Credit Card"/>Credit Card<br><br>
+						
+						<fieldset id="cardoption">
+						<input type="radio" name="CardCompany" id="amex" value="Amex"/>American Express<br>
+						<input type="radio" name="CardCompany" id="visa" value="Visa"/>Visa<br>
+						
+						<br>
+						<label for="cardnumber">Credit Card Number: </label>
+						<input id="cardnumber" type="text" name="cardnumber" /><br>
+                        
+                        <label for="expiredate">Expiration date: </label>
+						<input id="expiredate" type="date" name="expiredate" /><br>
+						
+                        </fieldset>
+						<!-- price-->
+						<br>
+						<input class="finalizeBtn"   type="submit" value="Finalize"  />
+						<input class="backBtn"   type="button" value="Back" onclick="goBack()" />
+						<input class="cancelBtn" type="button" value="Cancel" onclick="goHome()" />
+                        <br>
+                        <div id="message"></div>
+			
+				</form>
+			
+			<footer>
+				<p>
+					&copy; Copyright  by lawrence
+				</p>
+			</footer>
+		
+	</body>
+</html>

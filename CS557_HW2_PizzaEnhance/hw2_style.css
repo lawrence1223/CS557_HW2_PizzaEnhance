@@ -1,0 +1,57 @@
+﻿body {
+    width: 100%;
+		/*margin: 0px auto;
+		padding: 0px 0px;*/
+		background: #f6f1e6;
+		font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    width: 12em;
+    margin-left: 1em;
+    margin-bottom: .5em;
+}
+
+h1 {margin-left: 30%;}
+label {
+    float: left;  /*why need a float here */
+    text-align: left;
+    width: 9.5em;
+}
+
+label.error {
+	float: none;
+	color: red;
+	font-size: 87.5%;
+	margin-left: .5em;
+}
+
+/*section {
+    
+    width:30%; 
+    margin-left:600px;
+    padding: 0 2em 1em;
+}*/
+
+#order_form,#check_form {margin-left: 30%;}
+
+.logo-pic{display: inline; margin-left:13%;}
+.slogan{display: inline; margin: 15px; font-weight: bold;  font-size:250%}
+#content{margin-left: 30%;}
+li {list-style: none;}
+#mapcontainer{margin-left: 13%;}
+.menu{display: inline;margin-left:10%;}
+.order, #specials{display: inline;margin-left:8%;}
+
+#cheese,#cash, #credit, #amex, #visa {width: 3em;}
+#pizza-pic{margin-left: 13%;}
+#cardoption{display: none;}
+#specialbtn {width: 13em;}
+#p_option,#p_type {display: inline;}
+/*.container{display: inline; width:25%; margin-left:600px;}*/
+.calbtn,.AddBtn ,.GotoBtn, .finalizeBtn{margin-left:1%;}
+.backBtn, .cancelBtn{margin-left:1%;}
+
+#message{display: inline;}
+footer{margin-top:80%;
+       margin-left: 35%;}

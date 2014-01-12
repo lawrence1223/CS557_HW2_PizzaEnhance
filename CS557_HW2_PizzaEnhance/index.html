@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>NPU Pizza | Online Ordering </title>
+		<meta charset="utf-8" />
+		<meta name="description" content="NPU,pizza in fremont" />
+		<meta name="keywords" content="pizza,pizza in warmspring" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+        <!--<script src="detectmobilebrowser.js"></script>-->
+        <!--
+        <link type="text/css" rel="stylesheet" href="hw2_mobile_style.css" media="all and (max-width: 480px)" />
+		<link type="text/css" rel="stylesheet" href="hw2_style.css" media="all and (min-width: 481px)" />
+        <!--[if (lt IE 9)&(!IEmobile)]> <link rel="stylesheet" type="text/css" href="hw2_style.css" media="all" /><![endif]-->
+        
+        
+        <!--
+        <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+   	    <script src="jquery.validate.min.js"></script>
+        <script src="form_valid.js"></script>
+        <script src="hw2_script.js"></script>
+        -->   
+        
+</head>
+<body class="front">
+		
+    <a class="logo-pic" href="index.html" title="NPU Pizza"> 
+                    <img  src="images/logo.jpg" alt="NPU Pizza-Home" /></a>
+				<div class="slogan"> SO FRESH, SO EASY</div>
+
+		<!--<!--<div class="header">
+			
+			<div class="brand"> 
+				 
+				<a class="logo-pic" href="index.html" title="NPU Pizza"> 
+                    <img  src="images/logo.jpg" alt="NPU Pizza-Home" /></a>
+				<div class="slogan"> SO FRESH, SO EASY</div>
+			</div>
+			
+		</div>how to change to a smaller img if the screen is small-->			
+				<div id="pizza-pic">
+					<a href="hw2_menu.html" title="peperroni">
+						<img src="images/pizza-index.jpg" id="pizzaimg" alt="Peperroni" width="724" height="397" />
+					</a>
+					
+				</div>
+				<div class="navigation">
+					<ul>
+						<li class="menu">
+							<a href="hw2_menu.html">
+									You'll never forget this - Menu
+								</a>
+						</li>
+						<li class="order">
+							<a href="hw2_order.html">
+								Go Order Now
+							</a>
+						</li>
+						<li id="specials">
+							<input type="button" id="specialbtn" value="You're in luck with -Specials" onclick="special()" />
+								
+							
+							<p id="message">
+								
+							</p>
+							
+							
+						</li>
+					</ul>
+					<div id="mapcontainer">
+                        <p id="link">
+                        <a  href="https://www.google.com/maps?q=Bank+of+China+Tower,+Hong+Kong&t=m&z=16&iwloc=A" >View Google Map</a>
+                        </p> 
+                    </div>
+                    
+				
+			</div>
+		<footer>
+				&copy 2013 Copyright  by Lawrence
+		</footer>
+        <script>
+            var breakpoint = 481,
+            id = 'mapcontainer',
+            viewportWidth = window.innerWidth; if(viewportWidth > breakpoint){
+            var mapElement = document.createElement('iframe');
+            mapElement.width = "425";
+            mapElement.height = "350";
+            mapElement.id = 'map';
+            mapElement.src = 'https://www.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=liverpool+fc&aq=&sll=53.408371,-2.991573&sspn=0.293478,0.837021&g=liverpool&ie=UTF8&t=m&cid=8572218761800397763&hq=liverpool+fc&hnear=&z=11&amp;iwloc=A&output=embed';
+            document.getElementById(id).insertBefore(mapElement,link);
+            }
+        </script>
+	</body>
+</html>

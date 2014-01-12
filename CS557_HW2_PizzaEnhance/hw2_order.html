@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		<meta charset="utf-8" />
+		<title>order</title>
+		<meta name="author" content="lawrence" />
+    	<meta name="viewport" content="width=device-width; initial-scale=1.0, maximum-scale=1" />
+        <link type="text/css" rel="stylesheet" href="hw2_mobile_style.css" media="all and (max-width: 480px)"/>
+		<link type="text/css" rel="stylesheet" href="hw2_style.css" media="all and (min-width: 481px)" />
+        <!--[if (lt IE 9)&(!IEmobile)]> <link rel="stylesheet" type="text/css" href="hw2_style.css" media="all" /><![endif]-->
+        
+        <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+   	    <script src="jquery.validate.min.js"></script>
+        <script src="form_valid.js"></script>
+        <script src="hw2_script.js"></script>
+		
+	</head>
+<body>
+		
+		
+                <h1>
+				GET what you LIKE!!
+                 </h1>
+			
+			<form id="order_form">
+				
+				<p id="p_option">Pizza Size: </p>
+				
+				<select id="size">
+					<option value="small">SMALL</option>
+					<option value="Medium">MEDIUM</option>
+					<option value="LARGE">LARGE</option>
+				</select>
+				<br/><br/>
+                <p id="p_type">Pizza Type: </p>
+				<select id="ingre">
+					<option value="Pepperoni">Pepperoni</option>
+					<option value="Vegetarian">Vegetarian</option>
+					<option value="Combo">Combo</option>
+				</select>
+				<br/><br/>
+				<input type="checkbox" id="cheese"/>Extra cheese<br /><br />
+				Quantity (1~10): <input id='quan' type="number" name="quantity" min="1" max="10" step="1" size="3" /><br/><br/>
+				<button type="button" class="calbtn" onclick="calBtnclick()">Calculate</button>
+				<button type="button" class="AddBtn" onclick="addBtnclick()">Add to Cart</button>
+				<button type="button" class="GotoBtn" id="gotoBtn" onclick="goCartclick()">Go to Cart</button>
+				
+				<div id="price">
+				
+				
+				</div>
+                <div id="checkout">
+
+
+                </div>
+    
+                     
+
+				
+			</form>
+		
+			<footer>
+					&copy; Copyright  by lawrence
+			</footer>
+		
+	</body>
+</html>

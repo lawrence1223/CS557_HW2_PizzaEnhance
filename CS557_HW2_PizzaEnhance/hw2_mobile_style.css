@@ -1,0 +1,76 @@
+﻿@media screen and (max-width:480px){
+   body {
+        width: 100%;
+		/*margin: 0px auto;
+		padding: 0px 0px;*/
+		background: #f6f1e6;
+		font-family: Arial, Helvetica, sans-serif;
+        
+}
+#mapcontainer{margin-left: 13%;}
+
+input {
+    width: 8em;
+    /*margin-left: 1em;
+    margin-bottom: .5em;*/
+}
+
+label {
+    float: left;  /*why need a float here */
+    text-align: left;
+    width: 9.5em;
+}
+
+label.error {
+	float: none;
+	color: red;
+	font-size: 87.5%;
+}
+
+
+#order_form,#check_form {margin-left: 5%;}
+
+h1 {
+    margin-left: 5%;
+    text-align: center;
+}
+
+#cheese {width: 3em;}
+
+#specialbtn,#cardnumber {width: 13em;}
+
+#expiredate {width: 10em;}
+
+.logo-pic{margin-left:15%;}
+
+.slogan{
+    margin-left:12%;
+    font-weight: bold; 
+    font-size:150%;  
+}
+
+#pizza-pic{margin-left: 1%;}
+
+#cardoption{display: none;}
+
+#p_option,#p_type {display: inline;}
+
+.container{
+    display: inline; 
+    width:25%; 
+    margin-left:1%;       
+}
+
+.calbtn,.AddBtn ,.GotoBtn, .finalizeBtn,.backBtn, .cancelBtn,.menu,.order,#specials{margin-left:1%;}
+
+#cheese,#cash, #credit, #amex, #visa {width: 3em;}
+
+li {list-style: none;}
+
+#message{font-size: 85%;}
+
+footer{margin-left: 20%;} 
+    
+    
+}
+
